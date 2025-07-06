@@ -7,7 +7,7 @@ const { PORT = 8000 } = process.env;
 
 app.use(helmet());
 app.use('/', createProxyMiddleware({ 
-  target: 'https://api.themoviedb.org',
+  target: 'https://api.themoviedb.org/3',
   changeOrigin: true,
 }));
 app.listen(PORT);
